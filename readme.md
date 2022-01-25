@@ -1,19 +1,21 @@
-# Aplicacion de Gestión de Proyectos
+
+Gestor de Proyectos con Loging de Usuarios
 
 
 
-*Se va a hacer acopio de una documentación con la que podremos crear un gestor de proyectos/tareas, en donde además de eso, se le podrán encomendar tareas detalladas a los usuarios siempre que se acceda como administrador.*
+En este apartado, vamos a reutilizar el gestor de proyectos que hemos creado con anterioridad.
 
-*Evidentemente se hace uso tambien de elementos como phpmyadmin para la base de datos en donde crearemos la tabla necesaria para administrar los datos que le hemos introducido*
+A dicho gestor, le vamos a implementar un sistema de login de usuarios, en donde, por una parte encontramos el usuario de administración que tendrá acceso a la totalidad de la aplicación; y por otro lado tenemos la parte de obra, a la que entraran los trabajadores y donde sólo podran hacer las tareas básicas que les sean asignadas por los administradores.
 
-*En dicha aplicación, se hace una diferenciación entre proyectos y clientes; con ambas partes bien diferenciadas y donde se podrán modificar ambos elementos dentro de sus respectivos archivos*. Si en la apliación entramos como administrador, podremos tener acceso a practicamente todas las funcionalidades que ésta ofrece, entre ella tendremos por ejemplo; quitar y dar recursos a los empleados, modificar el estado de los clientes y de los proyectos etc...Mientras que si accedemos como usuario "normal" o "empleado" tan solo podremos acceder a las funcionalidades básicas, como poder acceder al registro de horas o modificar archivos básicos.
+Para la creacion de los loggins, tenemos que crear 4 elementos de loging que serán:
 
-Se hace acopio de phpGrid, el cual ayuda a implementar una serie de estilos y tablas tal y como podremos comprobar en la aplicación; ante su complejidad a la hora de modificar los archivos de estilo, solo se han modificado el resalte que obtenemos al pasar el ratón por encima de los elementos de las tablas y la pantalla de inicio. Dicho estilo de la página es totalmente modificable a cada gusto personal.
+  sesiones1_loging  (este login corresponderá con el acceso de los administradores)
+  sesiones1_loging2   (este login corresponderá con el acceso de los administradores)
+  sesiones1_principal (este login corresponderá con el botón de logout y un mensaje de bienvenida)
+  sesiones1_logout  (este login corresponderá con la salida de la aplicación)
 
-Por último, los archivos se pueden modificar, borrar e incluir a través de la aplicación o de la base de datos.
+El elemento de mayor dificultad lo encontramos a la hora introducir los enlaces correspondientes a cada uno de los logins; es decir, que el apartado de administración se conecte con el login de administración y viceversa. Para ello modificamos las direcciones de los archivos en los apartados.  header("Location: employee/tasks.php"); * y header("Location:manager/clients.php");
 
-Para la realización de dicho tutorial se ha usado el siguiente tutorial:
+Por último, en el index.php enlazamos los logins con los apartados de administración y obra con el siguiente enlace:
 
-https://www.freecodecamp.org/news/build-a-simple-project-management-application-from-scratch-in-php-5c0f886d8560/
-
-https://github.com/phpcontrols/phpgrid-project-management
+a href="sesiones1_login.php" target="new">Entrar como Manager</a> | <a href="sesiones1_login2 .php" target="new">Entrar como empleado</a
