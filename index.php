@@ -36,7 +36,7 @@ background: linear-gradient(180deg, rgba(163,160,160,1) 35%, rgba(186,177,177,0.
 <div class="centered">
 <h1>Mi Administrador de Gestor de Proyectos</h1>
 
-<a href="manager/clients.php" target="_new">Entrar como Manager</a> | <a href="employee/tasks.php" target="_new">Entrar como empleado</a>
+<a href="sesiones1_login.php" target="_new">Entrar como Manager</a> | <a href="sesiones1_login2 .php" target="_new">Entrar como empleado</a>
 </div>
 
 <div class="footer"><strong>Fernando Lago</strong> | phpGrid &copy; <?php echo date('Y'); ?>.</div>
